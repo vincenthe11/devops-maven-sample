@@ -4,9 +4,9 @@ kind: Deployment
 metadata:
   labels:
     app: kubesphere
-    component: ks-sample-dev
+    component: ks-sample-dev-v1
     tier: backend
-  name: ks-sample-dev
+  name: ks-sample-dev-v1
   namespace: $PROJECT_NAME
 spec:
   progressDeadlineSeconds: 600
@@ -14,13 +14,13 @@ spec:
   selector:
     matchLabels:
       app: kubesphere
-      component: ks-sample-dev
+      component: ks-sample-dev-v1
       tier: backend
   template:
     metadata:
       labels:
         app: kubesphere
-        component: ks-sample-dev
+        component: ks-sample-dev-v1
         tier: backend
     spec:
       containers:
