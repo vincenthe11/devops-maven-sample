@@ -24,6 +24,8 @@ spec:
         app: kubesphere
         component: ks-sample-dev
         tier: backend
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       containers:
         - env:
