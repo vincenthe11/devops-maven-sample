@@ -72,7 +72,7 @@ pipeline {
                     variable: 'KUBECONFIG')
                     ]) {
                     sh 'envsubst < deploy/dev-all-in-one/devops-sample.yaml | kubectl apply -f -'
-                    sh 'envsubst < https://raw.githubusercontent.com/istio/istio/release-1.16/samples/bookinfo/platform/kube/bookinfo.yaml | kubectl apply -f -'
+                    sh 'envsubst < deploy/dev-all-in-one/bookinfo.yaml | kubectl apply -f -'
                 }
             }
           }
